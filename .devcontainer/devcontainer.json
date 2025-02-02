@@ -1,6 +1,6 @@
 {
-    "name": "<replace> remote desktop environment",
-    "image": "ghcr.io/gbraad-apps/<replace>:latest",
+    "name": "OBS Studio remote desktop environment",
+    "image": "ghcr.io/gbraad-apps/obsstudio:latest",
     "runArgs": [ "--cap-add=NET_ADMIN", "--cap-add=NET_RAW", "--device=/dev/net/tun", "--device=/dev/fuse" ],
 
     "overrideCommand": false,

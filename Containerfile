@@ -12,11 +12,12 @@ RUN dnf install -y \
     && flatpak remote-add --if-not-exists \
         flathub https://dl.flathub.org/repo/flathub.flatpakrepo \
     && flatpak install --assumeyes \
-        flathub ... \
+        flathub com.obsproject.Studio \
+        com.obsproject.Studio.Plugin.NDI \
     && git config -f /etc/rdesktop/rdesktop.ini \
-	rdesktop.title "Personal ..." \
+	rdesktop.title "Personal OBS Studio" \
     && git config -f /etc/rdesktop/rdesktop.ini \
-	rdesktop.exec "flatpak run ..."
+	rdesktop.exec "flatpak run com.obsproject.Studio --system-talk-name=org.freedesktop.Avahi"
 
 # ensure to become root for systemd
 #ENTRYPOINT ["/sbin/init"]

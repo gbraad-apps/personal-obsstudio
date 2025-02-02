@@ -1,5 +1,5 @@
-Template to create Personal Flatpak-apps
-========================================
+OBS Studio for personal (remote) use
+====================================
 
 > [!NOTE]
 > This image is based on my [gbraad-devenv/fedora](https://github.com/gbraad-devenv/fedora) image, and is therefore personalized;
