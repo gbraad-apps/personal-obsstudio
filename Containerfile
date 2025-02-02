@@ -13,12 +13,15 @@ RUN dnf install -y \
         flathub https://dl.flathub.org/repo/flathub.flatpakrepo \
     && flatpak install --assumeyes \
         flathub com.obsproject.Studio \
-    && flatpak install --assumeyes \
-        flathub com.obsproject.Studio.Plugin.NDI \
     && git config -f /etc/rdesktop/rdesktop.ini \
 	rdesktop.title "Personal OBS Studio" \
     && git config -f /etc/rdesktop/rdesktop.ini \
-	rdesktop.exec "flatpak run com.obsproject.Studio --system-talk-name=org.freedesktop.Avahi"
+	rdesktop.exec "flatpak run com.obsproject.Studio"
+
+# NDI plugin install does not work at the moment?
+#    && flatpak install --assumeyes \
+#        flathub com.obsproject.Studio.Plugin.NDI \
+# --system-talk-name=org.freedesktop.Avahi
 
 # ensure to become root for systemd
 #ENTRYPOINT ["/sbin/init"]
