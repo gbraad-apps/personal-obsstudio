@@ -13,7 +13,8 @@ RUN dnf install -y \
         flathub https://dl.flathub.org/repo/flathub.flatpakrepo \
     && flatpak install --assumeyes \
         flathub com.obsproject.Studio \
-        com.obsproject.Studio.Plugin.NDI \
+    && flatpak install --assumeyes \
+        flathub com.obsproject.Studio.Plugin.NDI \
     && git config -f /etc/rdesktop/rdesktop.ini \
 	rdesktop.title "Personal OBS Studio" \
     && git config -f /etc/rdesktop/rdesktop.ini \
